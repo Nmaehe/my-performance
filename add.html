@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>KOPPEE - Coffee Shop HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free Website Template" name="keywords">
+    <meta content="Free Website Template" name="description">
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+    
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    
+        <!-- Libraries Stylesheet -->
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/style.min.css" rel="stylesheet">
+  </head>
+  <body onload="users_read()">
+
+     <!-- Navbar Start -->
+     <div class="container-fluid p-0 nav-bar">
+        <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
+            <a href="index.html" class="navbar-brand px-lg-4 m-0">
+                <h1 class="m-0 display-4 text-uppercase text-white">SU Smart Cafe</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto p-4">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="cafe.html" class="nav-item nav-link">Cafe</a>
+                    <a href="menu.html" class="nav-item nav-link ">Menu</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu text-capitalize">
+                            <a href="reservation.html" class="dropdown-item">Reservation</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="add.html" class="nav-item nav-link active">Add</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-5 position-relative overlay-bottom">
+        <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+            <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Add</h1>
+            <div class="d-inline-flex mb-lg-5">
+                <p class="m-0 text-white"><a class="text-white" href="">Home</a></p>
+                <p class="m-0 text-white px-2">/</p>
+                <p class="m-0 text-white">Add</p>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <div class="container">
+        <div class="row">
+            <h1>Cafe</h1>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="location.replace('create.html')"> Add Cafe</button>
+        <button type="button" class="btn btn-primary" onclick="location.replace('addpro.html')"> Add Product</button>
+        <button type="button" class="btn btn-primary" onclick="location.replace('index.html')"> Back</button>
+        <div class="row">
+            <table class="table-responsive">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Avatar</th>
+                    <th scope="col">Name</th>
+                    <th scope="col"> Detail</th>
+                    <th scope="col"> Type</th>
+                    <th scope="col">Manage</th>
+                    
+                  </tr>
+                </thead>
+                <tbody id="users_table">
+                </tbody>
+              </table>
+        </div>
+      </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+
+     <!-- Back to Top -->
+     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+     <!-- JavaScript Libraries -->
+     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+     <script src="lib/easing/easing.min.js"></script>
+     <script src="lib/waypoints/waypoints.min.js"></script>
+     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+     <script src="lib/tempusdominus/js/moment.min.js"></script>
+     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+ 
+     <!-- Contact Javascript File -->
+     <script src="mail/jqBootstrapValidation.min.js"></script>
+     <script src="mail/contact.js"></script>
+ 
+     <!-- Template Javascript -->
+     <script src="js/main.js"></script>
+  </body>
+</html>
+
+<script>
+    var users_read = function() {
+    var requestOptions = {
+        method: "GET",
+        redirect: "follow"
+};
+
+var users_table = document.getElementById('users_table');
+users_table.innerHTML = 'Loading...';
+fetch("https://4f3c-202-29-32-80.ngrok-free.app/crud1/api/users/read.php", requestOptions)
+  .then((response) => response.text())
+  .then((result) => {
+    users_table.innerHTML = '';
+    var jsonObj = JSON.parse(result);
+    for (let user of jsonObj) {
+        var row = `
+            <tr>
+                <th scope="row">`+user.id+`</th>
+                <td><img src="`+user.pok+`" width="50px" alt="`+user.name+`"></td>
+                <td>`+user.name+`</td>
+                <td>`+user.detail+`</td>
+                <td>`+user.type+`</td>
+                <td><a href="edit.html?id=`+user.id+`">Edit</a> 
+                    <a href="#" onclick="user_delete(`+user.id+`)">Del</a>
+                    </td>
+              </tr>
+        `;
+        users_table.insertAdjacentHTML('beforeend', row);
+    }
+
+  })
+  .catch((error) => console.error(error)); 
+    }
+    var user_delete = function(id) {
+        var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+var raw = JSON.stringify({
+  "id": id
+});
+
+var requestOptions = {
+  method: "DELETE",
+  headers: myHeaders,
+  body: raw,
+  redirect: "follow"
+};
+
+fetch("https://4f3c-202-29-32-80.ngrok-free.app/crud1/api/users/delete.php", requestOptions)
+  .then((response) => response.text())
+  .then((result) => {
+    var jsonObj = JSON.parse(result);
+        if (jsonObj.status == 'ok') {
+            alert('ok');
+            location.replace('add.html')
+        } else {
+            alert('error');
+        }
+  })
+  .catch((error) => console.error(error));
+    }
+</script>
